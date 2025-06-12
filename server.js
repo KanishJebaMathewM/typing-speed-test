@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/game', (req, res) => {
+app.get('./game', (req, res) => {
     res.sendFile(path.join(__dirname, 'game.html'));
 });
 
