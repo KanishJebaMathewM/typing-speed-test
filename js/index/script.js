@@ -73,24 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.sampleText.style.userSelect = 'none';
 
     elements.userInput.addEventListener('keydown', (e) => {
-        if ((e.key === 'Backspace' || e.key === 'Delete' || e.keyCode === 8) && state.isTestRunning) {
+        if ((e.key === 'Backspace' || e.key === 'Delete') && state.isTestRunning) {
             e.preventDefault();
+            // Optional: Play a sound or show visual feedback
             console.log('Backspace is disabled during the test!');
-            // Optional: Play a sound or show a warning
-        }
-    });
-
-    // Mobile browsers sometimes bypass 'keydown', so we also block changes via 'input'
-    let lastValue = '';
-    elements.userInput.addEventListener('input', (e) => {
-        if (state.isTestRunning) {
-            // If the new value is shorter, it means deletion happened
-            if (e.target.value.length < lastValue.length) {
-                e.target.value = lastValue; // Revert the change
-                console.log('Backspace/Delete blocked on mobile!');
-                // Optional: Show warning
-            }
-            lastValue = e.target.value; // Update the last value
         }
     });
 
