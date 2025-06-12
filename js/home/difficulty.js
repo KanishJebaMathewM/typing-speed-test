@@ -25,6 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         localStorage.setItem('playerName', name);
         localStorage.setItem('difficultyLevel', difficulty);
-        window.location.href = '/game';
+        window.location.href = '/typing-speed-test/game';
     });
 });
