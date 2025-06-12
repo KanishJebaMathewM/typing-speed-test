@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test Pro</title>
+    <link rel="stylesheet" href="css/home/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon">T</div>
+            <span>Typing Speed Test Pro</span>
+        </div>
+        <button class="help-btn">Help</button>
+    </div>
+
+    <div class="modal-overlay hidden">
+        <div class="modal-content">
+            <!-- Content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <div class="tagline">Test your typing skills and climb the ranks!</div>
+
+    <div class="get-started-box">
+        <h2>Get Started</h2>
+        <input type="text" class="input-field" placeholder="Enter your name">
+        
+        <h3>Choose your difficulty</h3>
+        <div class="difficulty-options">
+            <button class="difficulty-btn active" data-difficulty="Easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="Medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="Hard">Hard</button>
+            <button class="difficulty-btn" data-difficulty="Expert">Expert</button>
+        </div>
+        
+        <button class="start-btn">Start Challenge</button>
+    </div>
+
+    <!-- Add this empty div for the modal overlay -->
+    <div class="modal-overlay hidden"></div>
+
+    <script src="js/home/help.js"></script>
+    <script src="js/home/difficulty.js"></script>
+    <script src="js/home/button.js"></script>
+    
+</body>
+</html>

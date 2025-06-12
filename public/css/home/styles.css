@@ -1,0 +1,373 @@
+/* Dark Bluish Theme */
+:root {
+    --primary-dark: #0f172a;
+    --primary-blue: #1e40af;
+    --secondary-blue: #3b82f6;
+    --accent-blue: #60a5fa;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+    --dark-accent: #1e293b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --border-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1e293b 100%);
+    min-height: 100vh;
+    color: var(--text-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--dark-accent);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-blue);
+    color: var(--text-light);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+    transform: rotate(10deg);
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--secondary-blue), var(--accent-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+/* Modal styles - Updated to match dark theme */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.9); /* Using --primary-dark with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--dark-accent);
+    color: var(--text-light);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+.modal-content h2 {
+    color: var(--text-light);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    background: linear-gradient(to right, var(--secondary-blue), var(--accent-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.modal-content p, 
+.modal-content li {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.close-btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+.close-btn:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+
+.help-btn{
+    padding: 12px 25px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.home-btn:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* Tagline Styles */
+.tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+}
+
+.tagline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--secondary-blue), var(--accent-blue));
+    border-radius: 3px;
+}
+
+/* Get Started Box */
+.get-started-box {
+    background: var(--dark-accent);
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.get-started-box h2 {
+    margin-bottom: 30px;
+    color: var(--text-light);
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.get-started-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-blue);
+    border-radius: 2px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    background: var(--primary-dark);
+    color: var(--text-light);
+}
+
+.input-field:focus {
+    border-color: var(--secondary-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.input-field::placeholder {
+    color: var(--text-muted);
+}
+
+.get-started-box h3 {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.difficulty-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.difficulty-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--primary-dark);
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+}
+
+.difficulty-btn.active {
+    background: var(--primary-blue);
+    color: white;
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.4);
+    border-color: var(--secondary-blue);
+}
+
+.difficulty-btn:hover:not(.active) {
+    background: #1e293b;
+    color: var(--text-light);
+    border-color: var(--secondary-blue);
+}
+
+.start-btn {
+    padding: 16px 40px;
+    background: var(--secondary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.start-btn:hover {
+    background: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .difficulty-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .difficulty-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .get-started-box {
+        padding: 30px 20px;
+    }
+}
+
+/* Neon glow effect for active elements */
+.active-glow {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    }
+}
+
+/* Add these to your existing CSS */
+.difficulty-btn {
+    transition: all 0.3s ease;
+}
+
+.difficulty-btn.active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Click effect animation */
+button.click-effect {
+    transform: scale(0.95);
+    opacity: 0.9;
+}

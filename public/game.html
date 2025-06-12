@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="css/index/styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:void(0)" class="back-button" onclick="confirmBack()"></a>
+        
+        <h1>Typing Speed Test</h1>
+        
+        <div class="test-container">
+            <div class="timer">Time: <span id="time">60</span>s</div>
+            <div class="wpm">WPM: <span id="wpm">0</span></div>
+            <div class="accuracy">Accuracy: <span id="accuracy">0</span>%</div>
+            
+            <div id="sample-text" class="sample-text"></div>
+            
+            <textarea id="user-input" class="user-input" placeholder="Start typing here..."></textarea>
+            
+            <button id="restart-btn" class="btn">Restart Test</button>
+        </div>
+        
+        <div class="results-container hidden" id="results-container">
+            <h2>Test Results</h2>
+            <p>Player: <span id="final-name">0</span></p>
+            <p>Points: <span id="final-points">0</span></p>
+            <p>Words Per Minute: <span id="final-wpm">0</span></p>
+            <p>Accuracy: <span id="final-accuracy">0</span>%</p>
+            <p>Characters: <span id="final-chars">0</span></p>
+            <p>Errors: <span id="final-errors">0</span></p>
+        </div>
+    </div>
+    
+    <script src="js/index/back.js"></script>
+    <script src="js/index/script.js"></script>
+    
+</body>
+</html>
