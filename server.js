@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('typing-speed-test/game', (req, res) => {
-    res.sendFile(path.join(__dirname, 'game.html'));
+app.get('/game', (req, res) => {
+    res.sendFile(path.join(__dirname, 'typing-speed-test/game.html'));
 });
 
 // Start server
