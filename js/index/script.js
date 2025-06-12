@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.sampleText.style.userSelect = 'none';
 
     elements.userInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Backspace' && state.isTestRunning) {
+        if ((e.key === 'Backspace' || e.key === 'Delete') && state.isTestRunning) {
             e.preventDefault();
             // Optional: Play a sound or show visual feedback
             console.log('Backspace is disabled during the test!');
